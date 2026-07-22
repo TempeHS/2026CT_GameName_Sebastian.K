@@ -38,16 +38,25 @@ public class PlayerMovement : MonoBehaviour
 
        Flip();
 
-        if(Input.GetKeyDown("A"))
+        if(Input.GetKeyDown("a"))
         {
             transform.localScale = new Vector3(-1f, 1f, 1f);
         }
 
-         if(Input.GetKeyDown("D"))
+         if(Input.GetKeyDown("d"))
         {
             transform.localScale = new Vector3(1f, 1f, 1f);
         }
+        if(Input.GetKeyDown("leftarrow"))
+        {
+            transform.localScale = new Vector3(-1f, 1f, 1f);
+        }
 
+         if(Input.GetKeyDown("rightarrow"))
+        {
+            transform.localScale = new Vector3(1f, 1f, 1f);
+        }
+        
         move = Input.GetAxisRaw("Horizontal");
         //rb.linearVelocity = new Vector2(move * speed, rb.linearVelocity.y);
         if (move > .1f || move > -.1f)
