@@ -47,12 +47,12 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.localScale = new Vector3(1f, 1f, 1f);
         }
-        if(Input.GetKeyDown("leftarrow"))
+        if(Input.GetKeyDown(KeyCode.LeftArrow))
         {
             transform.localScale = new Vector3(-1f, 1f, 1f);
         }
 
-         if(Input.GetKeyDown("rightarrow"))
+         if(Input.GetKeyDown(KeyCode.RightArrow))
         {
             transform.localScale = new Vector3(1f, 1f, 1f);
         }
