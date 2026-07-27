@@ -264,8 +264,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff151fbb3a59b4a488934b6a62852922
-      internalID: 1758152478
+      spriteID: dc20817b6c8a55a42811272ad4614a21
+      internalID: 1381379616
       vertices: []
       indices: 
       edges: []
@@ -286,8 +286,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75ee5bcac375d8e4ebadc714df3ea6aa
-      internalID: 2085731244
+      spriteID: 672a65b00aea9e9428a32f41994d37d0
+      internalID: 1311418093
       vertices: []
       indices: 
       edges: []
@@ -308,8 +308,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db32eec6a17741a4d8150e2e9c6cb275
-      internalID: -1398698517
+      spriteID: f91aba63c505bf941b2cba50017c50fa
+      internalID: -753671910
       vertices: []
       indices: 
       edges: []
@@ -330,8 +330,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 759bd4cad669e56459bf412da3c494be
-      internalID: -539523035
+      spriteID: aa50c40872a804749ad78646c7e0051c
+      internalID: 49034932
       vertices: []
       indices: 
       edges: []
@@ -354,10 +354,10 @@ TextureImporter:
       New Piskel (6)_1: 2692668872550476181
       New Piskel (6)_2: -7693382868939088697
       New Piskel (6)_3: 6341370224737695196
-      New Piskel (6)_4: 1758152478
-      New Piskel (6)_5: 2085731244
-      New Piskel (6)_6: -1398698517
-      New Piskel (6)_7: -539523035
+      New Piskel (6)_4: 1381379616
+      New Piskel (6)_5: 1311418093
+      New Piskel (6)_6: -753671910
+      New Piskel (6)_7: 49034932
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

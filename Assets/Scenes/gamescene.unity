@@ -1008,7 +1008,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2015107092971177851, guid: ca03a06a43b5c3642bd0b8d6e10b315a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.04530134
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2015107092971177851, guid: ca03a06a43b5c3642bd0b8d6e10b315a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1080,7 +1080,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1110390316}
   - component: {fileID: 1110390315}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1557,7 +1557,7 @@ Transform:
   m_GameObject: {fileID: 1811357811}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2, z: 0}
+  m_LocalPosition: {x: 0, y: -2, z: -1}
   m_LocalScale: {x: 1.2, y: 1.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1716,7 +1716,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.73333335, y: 2.1333334}
+    oldSize: {x: 0.6, y: 2.1333334}
     newSize: {x: 0.11, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1793,7 +1793,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -226, y: -183.8}
+  m_AnchoredPosition: {x: -185, y: 180}
   m_SizeDelta: {x: 300, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2001823701
@@ -1909,7 +1909,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2015107092971177851, guid: 58ebd26c76c850340843be84a55475f3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.04530134
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2015107092971177851, guid: 58ebd26c76c850340843be84a55475f3, type: 3}
       propertyPath: m_LocalRotation.w
