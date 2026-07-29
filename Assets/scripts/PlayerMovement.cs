@@ -60,9 +60,9 @@ public class PlayerMovement : MonoBehaviour
         move = Input.GetAxisRaw("Horizontal");
         //rb.linearVelocity = new Vector2(move * speed, rb.linearVelocity.y);
         if (move > .1f || move > -.1f)
-               {
-                   anim.SetBool("isWalking", true);
-               }
+            {
+                anim.SetBool("isWalking", true);
+            }
         else
             {
                 anim.SetBool("isWalking", false);
