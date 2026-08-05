@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
    private bool leftPunch;
    private bool rightPunch;
    public float Health, MaxHealth;
-   private Animator anim;
+   Animator anim;
    private float move;
    private float speed;
    private Animator isWalking;
@@ -29,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
    {
       rb = GetComponent<Rigidbody2D>();
       healthBar.SetMaxHealth(MaxHealth);
+      anim = gameObject.GetComponent<Animator>();
    }
 
    // Update is called once per frame
@@ -57,7 +58,25 @@ public class PlayerMovement : MonoBehaviour
             transform.localScale = new Vector3(1f, 1f, 1f);
         }
         
+        if (Input.GetKeyDown("a"))
+        {
+            anim.SetTrigger("Active");
+        }
+        if (Input.GetKeyDown("d"))
+        {
+            anim.SetTrigger("Active");
+        }   
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            anim.SetTrigger("Active");
+        }
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            anim.SetTrigger("Active");
+        }
+
         move = Input.GetAxisRaw("Horizontal");
+
         //rb.linearVelocity = new Vector2(move * speed, rb.linearVelocity.y);
         if (move > .1f || move > -.1f)
             {
