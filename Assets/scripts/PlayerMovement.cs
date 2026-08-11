@@ -74,6 +74,22 @@ public class PlayerMovement : MonoBehaviour
         {
             anim.SetTrigger("Active");
         }
+         if (Input.GetKeyDown("s"))
+        {
+            anim.SetTrigger("Active");
+        }
+        if (Input.GetKeyDown("w"))
+        {
+            anim.SetTrigger("Active");
+        }   
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            anim.SetTrigger("Active");
+        }
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            anim.SetTrigger("Active");
+        }
 
         move = Input.GetAxisRaw("Horizontal");
 
