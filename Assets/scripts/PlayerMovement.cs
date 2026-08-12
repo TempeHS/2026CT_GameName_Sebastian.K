@@ -37,8 +37,6 @@ public class PlayerMovement : MonoBehaviour
    {
        rb.linearVelocity = moveInput * moveSpeed;
 
-       Flip();
-
         if(Input.GetKeyDown("a"))
         {
             transform.localScale = new Vector3(-1f, 1f, 1f);
@@ -137,17 +135,6 @@ public class PlayerMovement : MonoBehaviour
         Health += healthChange;
         Health = Mathf.Clamp(Health, 0, MaxHealth);
         healthBar.SetHealth(Health);
-    }
-
-    private void Flip()
-    {
-       //   if(IsFacingRight && MovementX < 0 || !IsFacingRight && MovementX > 0)
-       //   {
-       //       IsFacingRight = !IsFacingRight;
-       //       Vector2 ls = transform.localScale;
-       //       ls.x * = -1f;
-       //       transform.localScale = ls;
-       //   }
     }
 
     IEnumerator Pause1sec()
