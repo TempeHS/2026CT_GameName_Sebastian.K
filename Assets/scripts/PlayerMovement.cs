@@ -56,54 +56,48 @@ public class PlayerMovement : MonoBehaviour
             transform.localScale = new Vector3(1f, 1f, 1f);
         }
         
-        if (Input.GetKeyDown("a"))
+        if (Input.GetKey("a"))
         {
-            anim.SetTrigger("Active");
+            anim.SetTrigger("Walk");
         }
-        if (Input.GetKeyDown("d"))
+        if (Input.GetKey("d"))
         {
-            anim.SetTrigger("Active");
+            anim.SetTrigger("Walk");
         }   
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.LeftArrow))
         {
-            anim.SetTrigger("Active");
+            anim.SetTrigger("Walk");
         }
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.RightArrow))
         {
-            anim.SetTrigger("Active");
+            anim.SetTrigger("Walk");
         }
-         if (Input.GetKeyDown("s"))
+         if (Input.GetKey("s"))
         {
-            anim.SetTrigger("Active");
+            anim.SetTrigger("Walk");
         }
-        if (Input.GetKeyDown("w"))
+        if (Input.GetKey("w"))
         {
-            anim.SetTrigger("Active");
+            anim.SetTrigger("Walk");
         }   
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKey(KeyCode.DownArrow))
         {
-            anim.SetTrigger("Active");
+            anim.SetTrigger("Walk");
         }
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.UpArrow))
         {
-            anim.SetTrigger("Active");
+            anim.SetTrigger("Walk");
         }
 
-        move = Input.GetAxisRaw("Horizontal");
+        if (Input.GetMouseButtonDown(0))
+            {
+                anim.SetTrigger("leftpunch");
+            }
+        if (Input.GetMouseButtonDown(1))
+            {
+                anim.SetTrigger("rightpunch");
+            }
 
-        //rb.linearVelocity = new Vector2(move * speed, rb.linearVelocity.y);
-        if (move > .1f || move > -.1f)
-            {
-                anim.SetBool("isWalking", true);
-            }
-        else
-            {
-                anim.SetBool("isWalking", false);
-            }
-         if (Input.GetMouseButtonDown(0))
-               {
-                   anim.SetBool("isAttacking", true);
-               }
 
        if (Input.GetKeyDown("l"))
         {
