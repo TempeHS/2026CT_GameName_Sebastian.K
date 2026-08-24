@@ -1,45 +1,3 @@
-//using UnityEngine;
-//
-//public class EnemyMovement : MonoBehaviour
-//{
-//    public float moveSpeed = 10f;
-//    Rigidbody2D rb;
-//    public Transform target;
-//    Vector2 moveDirection;
-//
-//    private void Awake()
-//    {
-//        rb = GetComponent<Rigidbody2D>();
-//    }
-//    // Start is called once before the first execution of Update after the MonoBehaviour is created
-//    void Start()
-//    {
-//       target = GameObject.Find("Player").transform;
-//    }
-//
-//    // Update is called once per frame
-//    void Update()
-//    {
-//        if (target)
-//        {
-//            Vector3 direction = (target.position - target.position).normalized;
-//            moveDirection = direction;
-//
-//            // enemy rotation to face player
-//           //float angle = MathF.Atanz(direction.y, direction.x) * Mathf.Rad2Deg;
-//           //rb = rotation.angle;
-//        }
-//    }
-//
-//    private void FixedUpdate()
-//    {
-//        if (target)
-//        {
-//            rb.linearVelocity = new Vector2(moveDirection.x, moveDirection.y) * moveSpeed;
-//        }
-//    }
-//}
-
 using UnityEngine;
 
 public class SimpleEnemyChase : MonoBehaviour
@@ -47,7 +5,7 @@ public class SimpleEnemyChase : MonoBehaviour
     public Transform playerTarget;
     public float moveSpeed = 3.5f;
     public float detectionRadius = 8.0f;
-
+    public float PlayerXPos = entity.InverseTransformPoint(target.position);
     void Update()
     {
         if (playerTarget == null) return;
@@ -60,6 +18,17 @@ public class SimpleEnemyChase : MonoBehaviour
         {
             Vector3 direction = (playerTarget.position - transform.position).normalized;
             transform.Translate(direction * moveSpeed * Time.deltaTime);
+        }
+    }
+
+    private void Flip()
+    {
+        Vector3 PlayerXPos = myEntity.InverseTransformPoint(playerTarget.position);
+
+        if (PlayerXPos.x > 0) {
+            transform.localScale = new Vector3(1f, 1f, 1f);
+        } else if (PlayerXPos.x < 0) {
+            transform.localScale = new Vector3(-1f, 1f, 1f);
         }
     }
 }
