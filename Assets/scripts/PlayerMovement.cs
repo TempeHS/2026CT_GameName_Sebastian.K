@@ -15,8 +15,11 @@ public class PlayerMovement : MonoBehaviour
    Animator anim;
    private float move;
    private float speed;
-   private Animator isWalking;
-   private Animator isAttacking;
+   private Animator WalkingAnim;
+   private Animator AttackingAnim;
+   private bool isWalking;
+   private bool LeftPunch;
+   private bool RightPunch;
    public GameObject attackPoint;
    public float radius;
    //private bool IsFacingRight = false;
@@ -35,7 +38,16 @@ public class PlayerMovement : MonoBehaviour
    // Update is called once per frame
    void Update()
    {
+        move = Input.GetAxisRaw("Horizontal");
        rb.linearVelocity = moveInput * moveSpeed;
+       rb.linearVelocity = new Vector2(move * speed,rb.linearVelocity.y);
+       if (move > .1f || move > -.1f)
+        {
+            anim.SetBool("isWalking", true);
+        } else
+        {
+            anim.SetBool("isWalking", false);
+        }
 
         if(Input.GetKeyDown("a"))
         {
@@ -59,43 +71,55 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey("a"))
         {
             anim.SetTrigger("Walk");
+            isWalking = true;
         }
         if (Input.GetKey("d"))
         {
             anim.SetTrigger("Walk");
+            isWalking = true;
         }   
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             anim.SetTrigger("Walk");
+            isWalking = true;
         }
         if (Input.GetKey(KeyCode.RightArrow))
         {
             anim.SetTrigger("Walk");
+            isWalking = true;
         }
          if (Input.GetKey("s"))
         {
             anim.SetTrigger("Walk");
+            isWalking = true;
         }
         if (Input.GetKey("w"))
         {
             anim.SetTrigger("Walk");
+            isWalking = true;
         }   
         if (Input.GetKey(KeyCode.DownArrow))
         {
             anim.SetTrigger("Walk");
+            isWalking = true;
         }
         if (Input.GetKey(KeyCode.UpArrow))
         {
             anim.SetTrigger("Walk");
+            isWalking = true;
         }
 
         if (Input.GetMouseButtonDown(0))
             {
                 anim.SetTrigger("leftpunch");
+                isAttacking = true;
+                Pause2sec();
             }
         if (Input.GetMouseButtonDown(1))
             {
                 anim.SetTrigger("rightpunch");
+                isAttacking = true;
+                Pause2sec();
             }
 
 
@@ -131,8 +155,8 @@ public class PlayerMovement : MonoBehaviour
         healthBar.SetHealth(Health);
     }
 
-    IEnumerator Pause1sec()
+    IEnumerator Pause2sec()
     {
-        yield return new WaitForSeconds (1f);
+        yield return new WaitForSeconds (2f);
     }
 }

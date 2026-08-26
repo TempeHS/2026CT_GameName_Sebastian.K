@@ -1258,15 +1258,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 961185807490997054, guid: ca03a06a43b5c3642bd0b8d6e10b315a, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.32
+      value: 2.2857144
       objectReference: {fileID: 0}
     - target: {fileID: 2015107092971177851, guid: ca03a06a43b5c3642bd0b8d6e10b315a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 7
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2015107092971177851, guid: ca03a06a43b5c3642bd0b8d6e10b315a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 7
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2015107092971177851, guid: ca03a06a43b5c3642bd0b8d6e10b315a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1312,6 +1312,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2795111564296962622, guid: ca03a06a43b5c3642bd0b8d6e10b315a, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1811357815}
+    - target: {fileID: 2795111564296962622, guid: ca03a06a43b5c3642bd0b8d6e10b315a, type: 3}
+      propertyPath: flipTarget
+      value: 
+      objectReference: {fileID: 917102077}
     - target: {fileID: 2795111564296962622, guid: ca03a06a43b5c3642bd0b8d6e10b315a, type: 3}
       propertyPath: playerTarget
       value: 
@@ -2190,11 +2198,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2015107092971177851, guid: 58ebd26c76c850340843be84a55475f3, type: 3}
       propertyPath: m_LocalScale.x
-      value: 7
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2015107092971177851, guid: 58ebd26c76c850340843be84a55475f3, type: 3}
       propertyPath: m_LocalScale.y
-      value: 7
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2015107092971177851, guid: 58ebd26c76c850340843be84a55475f3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2241,24 +2249,32 @@ PrefabInstance:
       value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 2795111564296962622, guid: 58ebd26c76c850340843be84a55475f3, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1811357815}
+    - target: {fileID: 2795111564296962622, guid: 58ebd26c76c850340843be84a55475f3, type: 3}
+      propertyPath: flipTarget
+      value: 
+      objectReference: {fileID: 2132285803}
+    - target: {fileID: 2795111564296962622, guid: 58ebd26c76c850340843be84a55475f3, type: 3}
       propertyPath: playerTarget
       value: 
       objectReference: {fileID: 1811357815}
     - target: {fileID: 7324220374677790099, guid: 58ebd26c76c850340843be84a55475f3, type: 3}
       propertyPath: m_Size.x
-      value: 0.1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7324220374677790099, guid: 58ebd26c76c850340843be84a55475f3, type: 3}
       propertyPath: m_Size.y
-      value: 0.1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7324220374677790099, guid: 58ebd26c76c850340843be84a55475f3, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.17
+      value: 2.2857144
       objectReference: {fileID: 0}
     - target: {fileID: 7324220374677790099, guid: 58ebd26c76c850340843be84a55475f3, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.32
+      value: 2.2857144
       objectReference: {fileID: 0}
     - target: {fileID: 8508122366188857686, guid: 58ebd26c76c850340843be84a55475f3, type: 3}
       propertyPath: m_FlipX
