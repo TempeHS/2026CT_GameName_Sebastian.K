@@ -2,9 +2,9 @@
 
 | Field | Detail |
 |---|---|
-| **Game Title** | |
-| **Student Name(s)** | |
-| **Class / Course** | |
+| **Game Title: Office Invasion** | |
+| **Student Name(s): Sebastian K** | |
+| **Class / Course: Computer Technology** | |
 | **Repository** | |
 | **Unity Version** | |
 | **Document Version** | |
