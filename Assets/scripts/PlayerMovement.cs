@@ -9,20 +9,16 @@ public class PlayerMovement : MonoBehaviour
    private float MovementX;
    private Rigidbody2D rb;
    private Vector2 moveInput;
-   private bool leftPunch;
-   private bool rightPunch;
    public float Health, MaxHealth;
    Animator anim;
    private float move;
    private float speed;
    private Animator WalkingAnim;
    private Animator AttackingAnim;
-   private bool isWalking;
    private bool LeftPunch;
    private bool RightPunch;
    public GameObject attackPoint;
    public float radius;
-   //private bool IsFacingRight = false;
    [SerializeField] public LayerMask enemies;
 
    [SerializeField]
@@ -41,97 +37,56 @@ public class PlayerMovement : MonoBehaviour
         move = Input.GetAxisRaw("Horizontal");
        rb.linearVelocity = moveInput * moveSpeed;
        rb.linearVelocity = new Vector2(move * speed,rb.linearVelocity.y);
+
        if (move > .1f || move > -.1f)
         {
-            anim.SetBool("isWalking", true);
+            anim.SetBool("Walking", true);
         } else
         {
-            anim.SetBool("isWalking", false);
+            anim.SetBool("Walking", false);
         }
 
-        if(Input.GetKeyDown("a"))
+    if (Input.GetMouseButtonDown(0))
         {
-            transform.localScale = new Vector3(-1f, 1f, 1f);
+            anim.SetBool("Leftpunch", true);
+            Pause2sec();
+        } else{
+            anim.SetBool("Leftpunch", false);
+        }
+    if (Input.GetMouseButtonDown(1))
+        {
+            anim.SetBool("Rightpunch", true);
+            Pause2sec();
+        } else {
+            anim.SetBool("Rightpunch", false);
         }
 
-         if(Input.GetKeyDown("d"))
-        {
-            transform.localScale = new Vector3(1f, 1f, 1f);
-        }
-        if(Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            transform.localScale = new Vector3(-1f, 1f, 1f);
-        }
+    if (Input.GetKeyDown("l"))
+    {
+        SetHealth(-10f);
+    }
+    if (Input.GetKeyDown("p"))
+    {
+        SetHealth(10f);
+    }
 
-         if(Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            transform.localScale = new Vector3(1f, 1f, 1f);
-        }
-        
-        if (Input.GetKey("a"))
-        {
-            anim.SetTrigger("Walk");
-            isWalking = true;
-        }
-        if (Input.GetKey("d"))
-        {
-            anim.SetTrigger("Walk");
-            isWalking = true;
-        }   
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            anim.SetTrigger("Walk");
-            isWalking = true;
-        }
-        if (Input.GetKey(KeyCode.RightArrow))
-        {
-            anim.SetTrigger("Walk");
-            isWalking = true;
-        }
-         if (Input.GetKey("s"))
-        {
-            anim.SetTrigger("Walk");
-            isWalking = true;
-        }
-        if (Input.GetKey("w"))
-        {
-            anim.SetTrigger("Walk");
-            isWalking = true;
-        }   
-        if (Input.GetKey(KeyCode.DownArrow))
-        {
-            anim.SetTrigger("Walk");
-            isWalking = true;
-        }
-        if (Input.GetKey(KeyCode.UpArrow))
-        {
-            anim.SetTrigger("Walk");
-            isWalking = true;
-        }
-
-        if (Input.GetMouseButtonDown(0))
-            {
-                anim.SetTrigger("leftpunch");
-                isAttacking = true;
-                Pause2sec();
-            }
-        if (Input.GetMouseButtonDown(1))
-            {
-                anim.SetTrigger("rightpunch");
-                isAttacking = true;
-                Pause2sec();
-            }
-
-
-       if (Input.GetKeyDown("l"))
-        {
-            SetHealth(-10f);
-        }
-
-        if (Input.GetKeyDown("p"))
-        {
-            SetHealth(10f);
-        }
+    
+    if(Input.GetKeyDown("a"))
+    {
+        transform.localScale = new Vector3(-1f, 1f, 1f);
+    }
+     if(Input.GetKeyDown("d"))
+    {
+        transform.localScale = new Vector3(1f, 1f, 1f);
+    }
+    if(Input.GetKeyDown(KeyCode.LeftArrow))
+    {
+        transform.localScale = new Vector3(-1f, 1f, 1f);
+    }
+     if(Input.GetKeyDown(KeyCode.RightArrow))
+    {
+        transform.localScale = new Vector3(1f, 1f, 1f);
+    }
    }
 
     public void Attack()
