@@ -5,10 +5,10 @@
 | **Game Title: Office Invasion** | |
 | **Student Name(s): Sebastian K** | |
 | **Class / Course: Computer Technology** | |
-| **Repository** | |
-| **Unity Version** | |
-| **Document Version** | |
-| **Date** | |
+| **Repository: 2026CT_GameName_Sebastian.K** | |
+| **Unity Version: 6000.0.58f1** | |
+| **Document Version: 1.1** | |
+| **Date: 3/09/2026** | |
 
 ---
 
@@ -29,28 +29,29 @@
 ---
 
 ## 1. Game Overview
+  The game I have made is called 'Office Invasion', in which the main character (the player) breaks into an office building and starts a fistfight.
 
 ### 1.1 Genre
-
+  The genre of my game is a classic beat em up style action game. 
 
 ### 1.2 Target Audience
-
+  The target audience for my game is people who enjoy old arcade games and fast paced action games.
 
 ### 1.3 Game Summary
-
+  Upon the start of the game, the player enters the office building, and starts fighting the workers there. After the player wins the fight, they will ascend to the next floor and combat with more employees and even guards at the higher floors. When the player reaches the roof, the CEO of the company will be there, which will be the final bossfight.
 
 ### 1.4 Win / Loss Conditions
 | Condition | Description |
 |---|---|
-| Win | |
-| Loss | |
+| Win | Beat all the enemies with a stage | Ascend in the elevator or end the game if player is on the roof
+| Loss | Run out of health | Death animation and player will be sent back to title screen
 
 ### 1.5 Platform & Build Settings
 | Setting | Detail |
 |---|---|
-| Target Platform | |
-| Resolution | |
-| Build Type | |
+| Target Platform | PC |
+| Resolution | 1920 x 1080 |
+| Build Type | Windows 64 bit |
 
 ---
 

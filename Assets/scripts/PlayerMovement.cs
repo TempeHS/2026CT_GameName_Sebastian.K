@@ -34,9 +34,12 @@ public class PlayerMovement : MonoBehaviour
    // Update is called once per frame
    void Update()
    {
+        float moveX = Input.GetAxisRaw("Horizontal");
+        float moveY = Input.GetAxisRaw("Vertical");
         move = Input.GetAxisRaw("Horizontal");
        rb.linearVelocity = moveInput * moveSpeed;
        rb.linearVelocity = new Vector2(move * speed,rb.linearVelocity.y);
+       moveInput = new Vector2(moveX, moveY).normalized;
 
        if (move > .1f || move > -.1f)
         {
@@ -102,6 +105,11 @@ public class PlayerMovement : MonoBehaviour
    {
        moveInput = context.ReadValue<Vector2>();
    }
+
+   private void FixedUpdate()
+    {
+        rb.linearVelocity = new Vector2(moveInput.x * moveSpeed, moveInput.y * moveSpeed);
+    }
 
    public void SetHealth(float healthChange)
     {
